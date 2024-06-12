@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
-public class ObjectHit : MonoBehaviour
+public class GetScore : MonoBehaviour
 {
+    private int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +16,15 @@ public class ObjectHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        GetComponent<MeshRenderer>().material.color = Color.white;
+        if (collision.gameObject.tag != "Hit")
+        {
+            score++;
+            Debug.Log($"You've bumped in the wall: {score} times");
+        }
     }
 }
