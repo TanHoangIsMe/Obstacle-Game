@@ -16,12 +16,18 @@ public class End : MonoBehaviour
 
             // destroy player
             GameObject player = GameObject.FindWithTag("Player");
-            Destroy(player);
+            player.GetComponent<MeshRenderer>().enabled = false;
+            player.transform.position = transform.position;
 
             // Quit game
             Application.Quit();
 
-            UnityEditor.EditorApplication.isPlaying = false;
+            Invoke("StopEditor", 2);
         }
+    }
+
+    private void StopEditor()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
