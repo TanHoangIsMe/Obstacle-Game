@@ -149,13 +149,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30678126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39599243, y: -0.918237, z: -0.0022023623, w: 0.005106665}
-  m_LocalPosition: {x: 8.37, y: 4.49, z: 0}
+  m_LocalRotation: {x: 0.39440775, y: -0.91890854, z: -0.0030361393, w: 0.0063667493}
+  m_LocalPosition: {x: 8.369999, y: 4.49, z: -0.0000000029685907}
   m_LocalScale: {x: 1, y: 1, z: 1.1912}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 412748879}
-  m_LocalEulerAnglesHint: {x: 0, y: -179.363, z: -46.657}
+  m_LocalEulerAnglesHint: {x: -0.032, y: -179.192, z: -46.46}
 --- !u!64 &30678128
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -301,10 +301,9 @@ GameObject:
   - component: {fileID: 266391009}
   - component: {fileID: 266391008}
   - component: {fileID: 266391007}
-  - component: {fileID: 266391010}
   m_Layer: 0
   m_Name: Edge Wall 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,18 +394,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266391005}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &266391010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266391005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992747b1de9406f428da9d41a6b4f117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &287251850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6736340345743232232, guid: d9d219fa029b8a2428ba3997e30ea493, type: 3}
@@ -644,8 +631,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412748875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.00019760316, y: 0.0011433265, z: -0.0013241286, w: 0.9999985}
+  m_LocalPosition: {x: -0.012129471, y: 0.00036621094, z: -0.0014941059}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -664,7 +651,7 @@ Transform:
   - {fileID: 1098412846}
   - {fileID: 1473684525}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.023, y: 0.131, z: -0.152}
 --- !u!1001 &564355698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,10 +938,9 @@ GameObject:
   - component: {fileID: 765660723}
   - component: {fileID: 765660722}
   - component: {fileID: 765660721}
-  - component: {fileID: 765660724}
   m_Layer: 0
   m_Name: Edge Wall 3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,18 +1031,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765660719}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &765660724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765660719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992747b1de9406f428da9d41a6b4f117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &870604915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
@@ -1204,6 +1178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016190958}
   - component: {fileID: 1016190957}
+  - component: {fileID: 1016190959}
   m_Layer: 0
   m_Name: 'Game Controller '
   m_TagString: Untagged
@@ -1225,6 +1200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallDownCubePrefab: {fileID: 3098742499173858058, guid: 9d72c91032bcb194c9c77221eb5c1c0a, type: 3}
   rollerPrefab: {fileID: 5930696204048189714, guid: b5294a15e0667f74399521860cfaac1e, type: 3}
+  point: {fileID: 8952469042046743703, guid: 66d097bcddf6ded4d82ac0da7eb8cc9e, type: 3}
 --- !u!4 &1016190958
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,6 +1216,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016190959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016190956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d204bd4358825224f9e10dc055f0c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1041166045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6736340345743232232, guid: d9d219fa029b8a2428ba3997e30ea493, type: 3}
@@ -1258,10 +1246,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 412748879}
     m_Modifications:
-    - target: {fileID: 6141737670047720265, guid: 1c83464f3e3d8a9499bb20762ddc1466, type: 3}
-      propertyPath: yValue
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 7200197774265518200, guid: 1c83464f3e3d8a9499bb20762ddc1466, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1463,10 +1447,9 @@ GameObject:
   - component: {fileID: 1829139153}
   - component: {fileID: 1829139152}
   - component: {fileID: 1829139151}
-  - component: {fileID: 1829139154}
   m_Layer: 0
   m_Name: Edge Wall 1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1557,18 +1540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829139149}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1829139154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829139149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992747b1de9406f428da9d41a6b4f117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1882748858
 GameObject:
   m_ObjectHideFlags: 3
@@ -1697,10 +1668,9 @@ GameObject:
   - component: {fileID: 1911956190}
   - component: {fileID: 1911956189}
   - component: {fileID: 1911956188}
-  - component: {fileID: 1911956191}
   m_Layer: 0
   m_Name: Edge Wall 4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,18 +1761,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911956186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1911956191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911956186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992747b1de9406f428da9d41a6b4f117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2007438340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9193073551638228505, guid: 1c83464f3e3d8a9499bb20762ddc1466, type: 3}
@@ -1834,31 +1792,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99975634
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.008899306
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.015987592
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.012346948
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -1.042
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 5120587484316711287, guid: 454b6d610ac7623458d26cfff1d1f96f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.399
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,15 +10,18 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField]
     GameObject rollerPrefab;
 
+    [SerializeField]
+    GameObject point;
+
     private float timeToSpawnFallDownCube = 2.0f;
     private float timeToDestroyFallDownCube = 2.0f;
     private float timeToSpawnRoller = 5.0f;
     private float timeToDestroyRoller = 7.0f;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        SpawnPoint();
     }
 
     // Update is called once per frame
@@ -76,5 +79,46 @@ public class ObstacleSpawn : MonoBehaviour
                 timeToDestroyRoller = 7.0f;
             }
         }
+
+        // spawn point
+        GameObject existedPoint = GameObject.FindWithTag("Point");
+        if (existedPoint == null)
+        {
+            SpawnPoint();
+        }
+    }
+
+    // check if any objects that already existed in the position that we want to spawn point 
+    private bool CheckPointSpawnPosition(Vector3 position)
+    {
+        Collider[] checkInsideColliderMap = Physics.OverlapSphere(position, 0.0f);
+        if (checkInsideColliderMap.Length > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Create a position to spawn point
+    private Vector3 PointSpawnPosition()
+    {
+        Vector3 pointPosition = new Vector3(Random.Range(-4.40f, 4.50f),
+                0.4f, Random.Range(-4.60f, 4.60f));
+
+        return pointPosition;
+    }
+
+    // Spawn point
+    private void SpawnPoint()
+    {
+        Vector3 pointPosition = PointSpawnPosition();
+        while (CheckPointSpawnPosition(pointPosition))
+        {
+            pointPosition = PointSpawnPosition();
+        }
+        Instantiate(point, pointPosition, Quaternion.identity);
     }
 }

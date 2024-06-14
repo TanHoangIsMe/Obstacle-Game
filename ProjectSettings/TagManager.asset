@@ -7,6 +7,9 @@ TagManager:
   - Hit
   - FallDownCube
   - Roller
+  - Wall
+  - Point
+  - Spiner
   layers:
   - Default
   - TransparentFX

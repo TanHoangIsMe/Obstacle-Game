@@ -18,10 +18,26 @@ public class ObjectHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Spiner")
         {
-            GetComponent<MeshRenderer>().material.color = Color.white;
-            gameObject.tag = "Hit";
+            Debug.Log("You are hit !!!");
+            GetComponent<GetScore>().score -= 1;
+            GetComponent<GetScore>().ShowScore();
+
+        }
+        else if(collision.gameObject.tag == "Point")
+        {
+            GameObject point = GameObject.FindWithTag("Point");
+            Destroy(point);
+            GetComponent<GetScore>().score += 2;
+            GetComponent<GetScore>().ShowScore();
+        }
+        else if(collision.gameObject.tag == "FallDownCube" || collision.gameObject.tag == "Roller")
+        {
+            Debug.Log("You are hit hard !!!");
+            GetComponent<GetScore>().life -= 1;
+            GetComponent<GetScore>().score -= 2;
+            GetComponent<GetScore>().ShowScore();
         }
     }
 }

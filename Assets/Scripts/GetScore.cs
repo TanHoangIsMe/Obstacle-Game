@@ -5,26 +5,12 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GetScore : MonoBehaviour
 {
-    private int score = 0;
+    public int score = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int life = 2;
 
-    // Update is called once per frame
-    void Update()
+    public void ShowScore()
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag != "Hit")
-        {
-            score++;
-            Debug.Log($"You've bumped in the wall: {score} times");
-        }
+        Debug.Log($"Your score is : {score}");
     }
 }
